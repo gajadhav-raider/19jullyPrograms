@@ -1,0 +1,29 @@
+//App.js file
+let youtuber="Thapa Technical";
+
+let name ="Gaurav";
+let surname="Jadhav";
+function Fun()
+{
+  let color="Green";
+  return color;
+}
+
+export default youtuber;
+export {name,surname ,Fun };
+
+//index.js file
+import React from 'react';
+import ReactDOM from 'react-dom';
+import youtuber,{Fun,name,surname} from './App';
+
+ReactDOM.render(<>
+    <ol>
+    <li>{youtuber}</li>
+<li>{Fun()}</li>
+<li>{name}</li>
+<li>{surname}</li>
+</ol>
+</>,document.getElementById('root'));
+
+       

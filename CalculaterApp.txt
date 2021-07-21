@@ -1,0 +1,42 @@
+ //Calc.js
+  function Add(a,b)
+  {
+    return a+b;
+  }
+  
+  function Sub(a,b)
+  {
+    return a-b;
+  }
+  
+  function Div(a,b)
+  {
+    return a/b;
+  }
+  function Mul(a,b)
+  {
+    return a*b;
+  }
+  export {Add,Sub,Div,Mul};
+  //App.js
+  import React from 'react';
+import ReactDOM from 'react-dom';
+import {Add,Sub,Div,Mul} from './Calc';
+
+function App ()
+{
+  return(<><ul>    <li>The Addition of Two Number is {Add(40,4)}</li>
+  <li>The Subtstraction of Two Number is {Sub(20,2)}</li>
+  <li>The Division of Two Number is {Div(8,2)}</li>
+  <li>The Multililication of Two Number is {Mul(3,5)}</li></ul>
+  </>);
+}
+export default App;
+//index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+ReactDOM.render(
+    <App/>
+    ,document.getElementById('root')
+);
